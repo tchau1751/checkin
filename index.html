@@ -1,20 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Please Sign Ins</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  </head>
-  <body>
-    <center>
-        <h1>Sign in your Service  <style>
-          background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-                  url("../../media/examples/lizard.png");
-            body {background-color: darkblue;}
-            h1 {color: red;}
-            p {color: blue;}
-          </style></h1>
-        <iframe src="https://script.google.com/macros/s/AKfycbwn9KnnoZo9R-16MnPqiW7czbN3nAXNHtUVm54-CbTVE_8g2lNMI8hOnU9yEdf7BsGb/exec"
-        style="border:none;" height="475" width="455" title="Sign-Ins"></iframe></center>
-        
-  </body>
+<html lang="en">
+<head>
+	<title>Keypad</title>
+	<style type="text/css">
+ *{
+     margin:0;
+  	 padding:0;
+    box-zizing: border-box;
+    postion: relative;
+  }
+  .flex{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  body{
+    width:100vw;
+    height:100vh;
+    background: #479;
+    color:#fff;
+    font-family:sans-serif;
+    }
+   .numPan{
+     border-radius:10px:
+     background: #111;
+    }
+    .numPad .disp{   
+       border-bottom:2px solid#
+    
+    }
+   .numPan .disp input{
+     width: 222px;
+     padding: 16px;
+     outline:none;
+     border: none;
+     background: none:
+     text-align: center;
+     color: #00a8f0;
+     font-size: 2em;
+      }
+     .numPan .nums > .r div{
+      width:65px;
+      height:65px;
+      margin:12px;
+      border:3px solid #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor:pointer;
+      box-shadow: 0 0 30px #00aa8ff0f;     
+      }
+      
+	</style>
+</head>
+<body class="flex">
+ <div class= "numPan">
+ <div class="disp">
+ <input type="text">
+      
+
+<div class="nums">
+<div class="flex r r1">
+<div><span>1</span></div>
+<div><span>2</span></div>
+<div><span>3</span></div>
+</div>
+
+<div class="flex r r2">
+<div><span>3</span></div>
+<div><span>4</span></div>
+<div><span>5</span></div>
+</div>
+
+<div class="flex r r3">
+<div><span>6</span></div>
+<div><span>7</span></div>
+<div><span>8</span></div>
+</div>
+<div class="flex r r4">
+ <div><span>Cls</span></div>
+ <div><span>0</span></div>
+ <div><span><h4>Enter</h4></span></div>
+  </div>         
+ </div>
+</div>
+
+<script>
+  var btn=document.querySelectorAll(".r > div");
+  var inp=document.querySelector("input")
+  btn.forEach(val=>{
+    val.addEventlistener("click",()=>{                             
+      inp.value+=val.innerText;
+  </script>
+
+</body>
 </html>
